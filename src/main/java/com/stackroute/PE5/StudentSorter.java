@@ -2,49 +2,50 @@ package com.stackroute.PE5;
 
 public class StudentSorter {
 
-    int id;
-    String name;
-    int age;
+    //Getter,setter of Student class.
+    // ToString method also overridden.
 
-    StudentSorter(int id, String name, int age) { //constructor
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
+        private String id;
+        private String name;
+        private int age;
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
+        public StudentSorter(String id, String name, int age) { //constructor
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
 
-    public int getId() {
-        return id;
-    }
+        public String getId() {
+            return id;
+        }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+        public void setId(String id) {
+            this.id = id;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public String getName() {
+            return name;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public int getAge() {
-        return age;
-    }
+        public int getAge() {
+            return age;
+        }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+        public void setAge(int age) {
+            this.age = age;
+        }
 
-
+        @Override
+        public String toString() {
+            return "Student{" +
+                    "id='" + id + '\'' +
+                    ", name='" + name + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
 
 }

@@ -5,26 +5,17 @@ import java.util.Comparator;
 public class StudentSorterNew  implements  Comparator<StudentSorter> {
 
     @Override
-    public int compare(StudentSorter student1, StudentSorter student2) {
-
-       if(student1.age == student2.age) {  //first check age
-           if (student1.name == student2.name) { //if age is equal check the names
-               if (student1.id == student2.id) { //if names are equal then check the ids
-                   return 0;
-               } else if (student1.id > student2.id) {
-                   return 1;
-               } else {
-                   return -1;
-               }
-           } else {
-               return 1;
-           }
-       }else if (student1.age > student2.age) {
-           return -1;
-       } else {
-           return 1;
-       }
-
+    public int compare(StudentSorter o1, StudentSorter o2) {
+        if(o1.getAge() == o2.getAge())
+        {
+            if(o1.getName().compareTo(o2.getName())==0)
+                return o1.getId().compareTo(o2.getId());
+            else return o1.getName().compareTo(o2.getName());
+        }
+        else if(o1.getAge()>o2.getAge())
+            return 1;
+        else
+            return -1;
     }
 
 }
